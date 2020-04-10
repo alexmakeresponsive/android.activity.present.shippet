@@ -1,0 +1,14 @@
+
+/build
+/captures
+.externalNativeBuild
+.cxx
+
+
+.idea
+.gradle
+.DS_Store
+
+*.iml
+
+github.push.sh
