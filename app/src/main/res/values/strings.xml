@@ -5,4 +5,7 @@
     <string name="plug_a_3_name">Activity 3</string>
     <string name="plug_a_4_name">Activity 4</string>
     <string name="plug_a_5_name">Activity 5</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
