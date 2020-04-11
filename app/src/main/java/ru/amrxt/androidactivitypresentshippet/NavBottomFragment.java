@@ -15,46 +15,49 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 
+import java.lang.reflect.Array;
+
 import static android.provider.AlarmClock.EXTRA_MESSAGE;
 
 
-public class NavBottomFragment extends ListFragment {
+public class NavBottomFragment extends Fragment {
 
-    Number data[] = new Number[] { 1, 2, 3, 4, 5 };
+    final int[] listButton = new int[] {
+        R.id.button1,
+        R.id.button2,
+        R.id.button3,
+        R.id.button4,
+        R.id.button5,
+    };
 
+    int listButtonCurrentItem = 0;
 
     @Override
-    public void onActivityCreated(Bundle savedInstanceState) {
-        super.onActivityCreated(savedInstanceState);
+    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+                             Bundle savedInstanceState) {
+        // Inflate the layout for this fragment
+        View view = inflater.inflate(R.layout.fragment_nav_bottom, container, false);
 
 
 
-        ArrayAdapter<Number> adapter = new ArrayAdapter<Number>(getActivity(), android.R.layout.simple_list_item_1, data);
+        for (int currentItem : listButton) {
 
-        setListAdapter(adapter);
+            listButtonCurrentItem = currentItem;
+
+
+            Button button = (Button) view.findViewById(listButtonCurrentItem);
+                   button.setOnClickListener(new View.OnClickListener()
+            {
+                @Override
+                public void onClick(View view)
+                {
+                    Button button = (Button) view.findViewById(listButtonCurrentItem);
+
+                    System.out.println(listButtonCurrentItem);
+                }
+            });
+        }
+
+        return view;
     }
-
-//    @Override
-//    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-//                             Bundle savedInstanceState) {
-//        // Inflate the layout for this fragment
-//        View view = inflater.inflate(R.layout.fragment_nav_bottom, container, false);
-//
-//        Button button = (Button) view.findViewById(R.id.button1);
-//               button.setOnClickListener(new View.OnClickListener()
-//        {
-//            @Override
-//            public void onClick(View view)
-//            {
-//
-//                Button button = (Button) view.findViewById(R.id.button1);
-//
-//
-//
-//                System.out.println(button.getText());
-//            }
-//        });
-//
-//        return view;
-//    }
 }
