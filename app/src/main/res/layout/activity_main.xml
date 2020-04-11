@@ -14,14 +14,14 @@
         android:inputType="textPersonName"
         android:text="@string/plug_a_main_name"
         android:textAlignment="center"
-        app:layout_constraintBottom_toTopOf="@+id/nav.bottom.fragment"
+        app:layout_constraintBottom_toTopOf="@+id/navBottomFragment"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <fragment
-        android:id="@+id/nav.bottom.fragment"
+        android:id="@+id/navBottomFragment"
         android:name="ru.amrxt.androidactivitypresentshippet.NavBottomFragment"
         android:layout_width="match_parent"
         android:layout_height="107dp"

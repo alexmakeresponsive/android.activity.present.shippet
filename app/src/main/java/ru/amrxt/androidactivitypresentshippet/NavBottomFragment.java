@@ -11,34 +11,50 @@ import androidx.fragment.app.ListFragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 
 import static android.provider.AlarmClock.EXTRA_MESSAGE;
 
 
-public class NavBottomFragment extends Fragment {
+public class NavBottomFragment extends ListFragment {
+
+    Number data[] = new Number[] { 1, 2, 3, 4, 5 };
+
+
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        View view = inflater.inflate(R.layout.fragment_nav_bottom, container, false);
-
-        Button button = (Button) view.findViewById(R.id.button1);
-               button.setOnClickListener(new View.OnClickListener()
-        {
-            @Override
-            public void onClick(View view)
-            {
-
-                Button button = (Button) view.findViewById(R.id.button1);
+    public void onActivityCreated(Bundle savedInstanceState) {
+        super.onActivityCreated(savedInstanceState);
 
 
 
-                System.out.println(button.getText());
-            }
-        });
+        ArrayAdapter<Number> adapter = new ArrayAdapter<Number>(getActivity(), android.R.layout.simple_list_item_1, data);
 
-        return view;
+        setListAdapter(adapter);
     }
+
+//    @Override
+//    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+//                             Bundle savedInstanceState) {
+//        // Inflate the layout for this fragment
+//        View view = inflater.inflate(R.layout.fragment_nav_bottom, container, false);
+//
+//        Button button = (Button) view.findViewById(R.id.button1);
+//               button.setOnClickListener(new View.OnClickListener()
+//        {
+//            @Override
+//            public void onClick(View view)
+//            {
+//
+//                Button button = (Button) view.findViewById(R.id.button1);
+//
+//
+//
+//                System.out.println(button.getText());
+//            }
+//        });
+//
+//        return view;
+//    }
 }
