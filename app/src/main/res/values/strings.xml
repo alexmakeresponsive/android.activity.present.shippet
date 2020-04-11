@@ -1,8 +1,8 @@
 <resources>
     <string name="app_name">Activity Present Snippet</string>
     <string name="plug_a_main_name">Activity Main</string>
+    <string name="plug_a_1_name">Activity 1</string>
     <string name="plug_a_2_name">Activity 2</string>
-    <string name="plug_a_3_name">Activity 3</string>
     <string name="plug_a_4_name">Activity 4</string>
     <string name="plug_a_5_name">Activity 5</string>
 
