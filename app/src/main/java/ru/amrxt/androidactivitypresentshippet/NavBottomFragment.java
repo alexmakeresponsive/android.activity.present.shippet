@@ -14,6 +14,8 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ListView;
+import android.widget.Toast;
 
 import java.lang.reflect.Array;
 
@@ -30,7 +32,6 @@ public class NavBottomFragment extends Fragment {
         R.id.button5,
     };
 
-    int listButtonCurrentItem = 0;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -38,22 +39,15 @@ public class NavBottomFragment extends Fragment {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_nav_bottom, container, false);
 
-
-
-        for (int currentItem : listButton) {
-
-            listButtonCurrentItem = currentItem;
-
-
-            Button button = (Button) view.findViewById(listButtonCurrentItem);
-                   button.setOnClickListener(new View.OnClickListener()
+        for (int i=0; i<=4; i++)
+        {
+            final Button button = (Button) view.findViewById(listButton[i]);
+                         button.setOnClickListener(new View.OnClickListener()
             {
                 @Override
                 public void onClick(View view)
                 {
-                    Button button = (Button) view.findViewById(listButtonCurrentItem);
-
-                    System.out.println(listButtonCurrentItem);
+                    System.out.println(button.getText());
                 }
             });
         }

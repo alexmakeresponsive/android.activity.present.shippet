@@ -6,6 +6,10 @@
     <string name="plug_a_4_name">Activity 4</string>
     <string name="plug_a_5_name">Activity 5</string>
 
+    <string name="plug_empty">--</string>
+    <string name="number_list">Список чисел</string>
+
+
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
