@@ -1,5 +1,6 @@
 package ru.amrxt.androidactivitypresentshippet;
 
+import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
@@ -32,6 +33,16 @@ public class NavBottomFragment extends Fragment {
         R.id.button5,
     };
 
+    final Class[] listActivity = new Class[] {
+        Secondary1Activity.class,
+        Secondary2Activity.class,
+
+        MainActivity.class,
+
+        Secondary4Activity.class,
+        Secondary5Activity.class,
+    };
+
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -47,7 +58,11 @@ public class NavBottomFragment extends Fragment {
                 @Override
                 public void onClick(View view)
                 {
-                    System.out.println(button.getText());
+                    String text   = button.getText().toString();
+                    Integer index = Integer.parseInt(text) - 1;
+
+                    Intent intent = new Intent(getActivity(), listActivity[index]);
+                    startActivity(intent);
                 }
             });
         }
