@@ -61,8 +61,7 @@ public class NavBottomFragment extends Fragment {
                     String text   = button.getText().toString();
                     Integer index = Integer.parseInt(text) - 1;
 
-                    Intent intent = new Intent(getActivity(), listActivity[index]);
-                    startActivity(intent);
+                    ((MainActivity)getActivity()).contentFragmentReplace(index);
                 }
             });
         }

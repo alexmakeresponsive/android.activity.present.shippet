@@ -2,12 +2,21 @@ package ru.amrxt.androidactivitypresentshippet;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
 import android.os.Bundle;
 
 public class MainActivity extends AppCompatActivity {
+
+    final Fragment[] fragmentList = new Fragment[] {
+        new ContentMiddle1Fragment(),
+        new ContentMiddle2Fragment(),
+        new ContentMiddleMainFragment(),
+        new ContentMiddle4Fragment(),
+        new ContentMiddle5Fragment(),
+    };
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,6 +29,14 @@ public class MainActivity extends AppCompatActivity {
         ContentMiddleMainFragment fragment = new ContentMiddleMainFragment();
 
                             fragmentTransaction.add(R.id.fragment_container, fragment);
+                            fragmentTransaction.commit();
+    }
+
+    public void contentFragmentReplace(Integer index) {
+        FragmentManager fragmentManager         = getSupportFragmentManager();
+        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+
+                            fragmentTransaction.replace(R.id.fragment_container, fragmentList[index]);
                             fragmentTransaction.commit();
     }
 }
