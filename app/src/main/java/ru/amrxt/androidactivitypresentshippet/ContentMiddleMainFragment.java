@@ -6,6 +6,8 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ArrayAdapter;
+import android.widget.AutoCompleteTextView;
 import android.widget.CheckedTextView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -20,6 +22,15 @@ public class ContentMiddleMainFragment extends Fragment {
             R.id.checkedTextView2,
             R.id.checkedTextView3,
             R.id.checkedTextView4
+    };
+
+    final String[] listAutocompleteCountry = new String[] {
+        "Rossia",
+        "Belarussia",
+        "Ukraine",
+        "Kazahstan",
+        "Litva",
+        "Latvia",
     };
 
     @Override
@@ -45,6 +56,11 @@ public class ContentMiddleMainFragment extends Fragment {
             });
 
         }
+
+        AutoCompleteTextView autoCompleteTextView = view.findViewById(R.id.autoCompleteTextView);
+        ArrayAdapter<String> adapter              = new ArrayAdapter<String>(getActivity(), R.layout.support_simple_spinner_dropdown_item, listAutocompleteCountry);
+
+                             autoCompleteTextView.setAdapter(adapter);
 
         return view;
     }
