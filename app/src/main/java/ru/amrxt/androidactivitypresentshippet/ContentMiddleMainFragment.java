@@ -10,6 +10,7 @@ import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
 import android.widget.CheckedTextView;
 import android.widget.LinearLayout;
+import android.widget.MultiAutoCompleteTextView;
 import android.widget.TextView;
 
 import androidx.fragment.app.Fragment;
@@ -31,6 +32,11 @@ public class ContentMiddleMainFragment extends Fragment {
         "Kazahstan",
         "Litva",
         "Latvia",
+    };
+
+    final String[] listAutocompleteCountryRegions = new String[] {
+            "Omsksaya oblast",
+            "Moskovskaya oblast",
     };
 
     @Override
@@ -61,6 +67,14 @@ public class ContentMiddleMainFragment extends Fragment {
         ArrayAdapter<String> adapter              = new ArrayAdapter<String>(getActivity(), R.layout.support_simple_spinner_dropdown_item, listAutocompleteCountry);
 
                              autoCompleteTextView.setAdapter(adapter);
+
+
+        MultiAutoCompleteTextView multiAutoCompleteTextView = view.findViewById(R.id.multiAutoCompleteTextView);
+        ArrayAdapter<String> adapterMultiple                = new ArrayAdapter<String>(getActivity(), R.layout.support_simple_spinner_dropdown_item, listAutocompleteCountryRegions);
+
+                                  multiAutoCompleteTextView.setAdapter(adapterMultiple);
+                                  multiAutoCompleteTextView.setTokenizer(new MultiAutoCompleteTextView.CommaTokenizer());
+
 
         return view;
     }
