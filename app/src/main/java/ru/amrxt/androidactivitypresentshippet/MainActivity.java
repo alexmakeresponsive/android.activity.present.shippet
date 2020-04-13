@@ -16,6 +16,9 @@ public class MainActivity extends AppCompatActivity {
         new ContentMiddleMainFragment(),
         new ContentMiddle4Fragment(),
         new ContentMiddle5Fragment(),
+        new ContentMiddleMainChild1Fragment(),
+        new ContentMiddleMainChild2Fragment(),
+        new ContentMiddleMainChild3Fragment(),
     };
 
     @Override
