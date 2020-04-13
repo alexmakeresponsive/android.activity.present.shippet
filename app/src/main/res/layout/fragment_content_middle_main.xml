@@ -5,7 +5,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">
@@ -13,307 +12,30 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical" >
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:orientation="vertical">
 
-            <androidx.constraintlayout.widget.ConstraintLayout
+            <Button
+                android:id="@+id/button10"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginStart="16dp"
+                android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
-                android:layout_marginEnd="16dp">
+                android:text="Fragment.Widgets" />
 
-                <TextView
-                    android:id="@+id/textView9"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Group.4"
-                    android:textSize="14sp"
-                    app:layout_constraintBottom_toTopOf="@+id/autoCompleteTextView"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
-
-
-                <AutoCompleteTextView
-                    android:id="@+id/autoCompleteTextView"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:hint="Select Country"
-                    android:textSize="14sp"
-                    app:layout_constraintBottom_toTopOf="@+id/multiAutoCompleteTextView"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/textView9" />
-
-                <MultiAutoCompleteTextView
-                    android:id="@+id/multiAutoCompleteTextView"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:hint="Select Region"
-                    android:textSize="14sp"
-                    app:layout_constraintBottom_toTopOf="@+id/textInputLayout"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/autoCompleteTextView" />
-
-                <com.google.android.material.textfield.TextInputLayout
-                    android:id="@+id/textInputLayout"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:hint="SomeValue"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/multiAutoCompleteTextView">
-
-                    <com.google.android.material.textfield.TextInputEditText
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:textSize="14sp" />
-                </com.google.android.material.textfield.TextInputLayout>
-
-            </androidx.constraintlayout.widget.ConstraintLayout>
-
-            <androidx.constraintlayout.widget.ConstraintLayout
+            <Button
+                android:id="@+id/button8"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginLeft="16dp"
+                android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
-                android:layout_marginRight="16dp">
+                android:text="Fragment.Text" />
 
-                <TextView
-                    android:id="@+id/textView8"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Group.3"
-                    app:layout_constraintBottom_toTopOf="@+id/checkedTextView"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
-
-                <CheckedTextView
-                    android:id="@+id/checkedTextView"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="6dp"
-                    android:checkMark="@android:drawable/checkbox_off_background"
-                    android:checked="true"
-                    android:text="CheckedTextView"
-                    app:layout_constraintBottom_toTopOf="@+id/checkedTextView2"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/textView8" />
-
-                <CheckedTextView
-                    android:id="@+id/checkedTextView2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="6dp"
-                    android:checkMark="@android:drawable/checkbox_off_background"
-                    android:checked="true"
-                    android:text="CheckedTextView"
-                    app:layout_constraintBottom_toTopOf="@+id/checkedTextView3"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/checkedTextView" />
-
-                <CheckedTextView
-                    android:id="@+id/checkedTextView3"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="6dp"
-                    android:checkMark="@android:drawable/checkbox_off_background"
-                    android:checked="true"
-                    android:text="CheckedTextView"
-                    app:layout_constraintBottom_toTopOf="@+id/checkedTextView4"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/checkedTextView2" />
-
-                <CheckedTextView
-                    android:id="@+id/checkedTextView4"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="6dp"
-                    android:checkMark="@android:drawable/checkbox_off_background"
-                    android:checked="true"
-                    android:text="CheckedTextView"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/checkedTextView3" />
-            </androidx.constraintlayout.widget.ConstraintLayout>
-
-            <androidx.constraintlayout.widget.ConstraintLayout
+            <Button
+                android:id="@+id/button9"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginLeft="16dp"
+                android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
-                android:layout_marginRight="16dp">
-
-                <TextView
-                    android:id="@+id/textView5"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Group.1"
-                    app:layout_constraintBottom_toTopOf="@+id/editText3"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
-
-                <EditText
-                    android:id="@+id/editText3"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:ems="10"
-                    android:hint="Plain.Text"
-                    android:inputType="textPersonName"
-                    android:textSize="14sp"
-                    app:layout_constraintBottom_toTopOf="@+id/editText4"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/textView5" />
-
-                <EditText
-                    android:id="@+id/editText4"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:ems="10"
-                    android:hint="Password"
-                    android:inputType="textPassword"
-                    android:textSize="14sp"
-                    app:layout_constraintBottom_toTopOf="@+id/editText5"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/editText3" />
-
-                <EditText
-                    android:id="@+id/editText5"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:ems="10"
-                    android:hint="Password.Number"
-                    android:inputType="numberPassword"
-                    android:textSize="14sp"
-                    app:layout_constraintBottom_toTopOf="@+id/editText6"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/editText4" />
-
-                <EditText
-                    android:id="@+id/editText6"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:ems="10"
-                    android:hint="Email."
-                    android:inputType="textEmailAddress"
-                    android:textSize="14sp"
-                    app:layout_constraintBottom_toTopOf="@+id/editText7"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/editText5" />
-
-                <EditText
-                    android:id="@+id/editText7"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:ems="10"
-                    android:hint="Phone.Number"
-                    android:inputType="phone"
-                    android:textSize="14sp"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/editText6" />
-            </androidx.constraintlayout.widget.ConstraintLayout>
-
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginLeft="16dp"
-                android:layout_marginTop="16dp"
-                android:layout_marginRight="16dp">
-
-                <TextView
-                    android:id="@+id/textView7"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Group.2"
-                    app:layout_constraintBottom_toTopOf="@+id/editText8"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
-
-                <EditText
-                    android:id="@+id/editText8"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:ems="10"
-                    android:hint="Address.Post"
-                    android:inputType="textPostalAddress"
-                    android:textSize="14sp"
-                    app:layout_constraintBottom_toTopOf="@+id/editText9"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/textView7" />
-
-                <EditText
-                    android:id="@+id/editText9"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:ems="10"
-                    android:gravity="start|top"
-                    android:hint="Text.Multiline"
-                    android:inputType="textMultiLine"
-                    android:textSize="14sp"
-                    app:layout_constraintBottom_toTopOf="@+id/editText10"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/editText8" />
-
-                <EditText
-                    android:id="@+id/editText10"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:ems="10"
-                    android:hint="Time"
-                    android:inputType="time"
-                    android:textSize="14sp"
-                    app:layout_constraintBottom_toTopOf="@+id/editText11"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/editText9" />
-
-                <EditText
-                    android:id="@+id/editText11"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:ems="10"
-                    android:hint="Date"
-                    android:inputType="date"
-                    android:textSize="14sp"
-                    app:layout_constraintBottom_toTopOf="@+id/editText12"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/editText10" />
-
-                <EditText
-                    android:id="@+id/editText12"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:ems="10"
-                    android:hint="Number.Simple"
-                    android:inputType="number"
-                    android:textSize="14sp"
-                    app:layout_constraintBottom_toTopOf="@+id/editText13"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/editText11" />
-
-                <EditText
-                    android:id="@+id/editText13"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:ems="10"
-                    android:hint="Number.Signed"
-                    android:inputType="numberSigned"
-                    android:textSize="14sp"
-                    app:layout_constraintBottom_toTopOf="@+id/editText14"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/editText12" />
-
-                <EditText
-                    android:id="@+id/editText14"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:ems="10"
-                    android:hint="Number.Decimal"
-                    android:inputType="numberDecimal"
-                    android:textSize="14sp"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/editText13" />
-            </androidx.constraintlayout.widget.ConstraintLayout>
-
+                android:text="Fragment.Buttons" />
         </LinearLayout>
     </ScrollView>
 

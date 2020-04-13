@@ -45,35 +45,6 @@ public class ContentMiddleMainFragment extends Fragment {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_content_middle_main, container, false);
 
-        for (int i=0; i<=3; i++)
-        {
-            final CheckedTextView textView = view.findViewById(listCheckbox[i]);
-
-            textView.setOnClickListener(new View.OnClickListener() {
-                @Override public void onClick(View view) {
-                    if (textView.isChecked()) {
-                        textView.setChecked(false);
-                        textView.setCheckMarkDrawable(android.R.drawable.checkbox_off_background);
-                    } else {
-                        textView.setChecked(true);
-                        textView.setCheckMarkDrawable(android.R.drawable.checkbox_on_background);
-                    }
-                }
-            });
-
-        }
-
-        AutoCompleteTextView autoCompleteTextView = view.findViewById(R.id.autoCompleteTextView);
-        ArrayAdapter<String> adapter              = new ArrayAdapter<String>(getActivity(), R.layout.support_simple_spinner_dropdown_item, listAutocompleteCountry);
-
-                             autoCompleteTextView.setAdapter(adapter);
-
-
-        MultiAutoCompleteTextView multiAutoCompleteTextView = view.findViewById(R.id.multiAutoCompleteTextView);
-        ArrayAdapter<String> adapterMultiple                = new ArrayAdapter<String>(getActivity(), R.layout.support_simple_spinner_dropdown_item, listAutocompleteCountryRegions);
-
-                                  multiAutoCompleteTextView.setAdapter(adapterMultiple);
-                                  multiAutoCompleteTextView.setTokenizer(new MultiAutoCompleteTextView.CommaTokenizer());
 
 
         return view;
