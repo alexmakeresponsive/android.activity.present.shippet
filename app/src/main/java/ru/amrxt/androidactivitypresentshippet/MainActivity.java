@@ -29,6 +29,7 @@ public class MainActivity extends AppCompatActivity {
         MainViewModelActivity2.class,
         NavDrawerActivity.class,
         BottomNavActivity.class,
+        TabbedActivity.class,
     };
 
     @Override
