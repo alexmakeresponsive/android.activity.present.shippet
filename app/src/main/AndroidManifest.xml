@@ -9,7 +9,16 @@
         android:roundIcon="@mipmap/launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-
+        <activity
+            android:name=".FullscreenActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/title_activity_fullscreen"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/FullscreenTheme">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="ru.amrxt.androidactivitypresentshippet.MainActivity" />
+        </activity>
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -17,13 +26,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
         <activity
             android:name=".MovieListActivity"
             android:label="@string/title_movie_list"
-            android:parentActivityName="ru.amrxt.androidactivitypresentshippet.MainActivity"
+            android:parentActivityName=".MainActivity"
             android:theme="@style/AppTheme.NoActionBar">
-
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="ru.amrxt.androidactivitypresentshippet.MainActivity" />
@@ -40,9 +47,7 @@
         <activity
             android:name=".NavDrawerActivity"
             android:label="@string/title_activity_nav_drawer"
-            android:theme="@style/AppTheme.NoActionBar">
-
-        </activity>
+            android:theme="@style/AppTheme.NoActionBar"></activity>
         <activity android:name=".Secondary5Activity" />
         <activity android:name=".Secondary4Activity" />
         <activity android:name=".Secondary2Activity" />

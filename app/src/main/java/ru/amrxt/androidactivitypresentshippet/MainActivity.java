@@ -24,7 +24,8 @@ public class MainActivity extends AppCompatActivity {
     };
 
     final Class[] classtList = new Class[] {
-        MovieListActivity.class
+        MovieListActivity.class,
+        FullscreenActivity.class
     };
 
     @Override

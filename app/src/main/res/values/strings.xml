@@ -28,4 +28,8 @@
     <string name="menu_send">Send</string>
     <string name="title_movie_list">Movies</string>
     <string name="title_movie_detail">Movie Detail</string>
+
+    <string name="title_activity_fullscreen">FullscreenActivity</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
 </resources>
