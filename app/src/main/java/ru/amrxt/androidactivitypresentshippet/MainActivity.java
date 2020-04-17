@@ -28,6 +28,7 @@ public class MainActivity extends AppCompatActivity {
         FullscreenActivity.class,
         MainViewModelActivity2.class,
         NavDrawerActivity.class,
+        BottomNavActivity.class,
     };
 
     @Override

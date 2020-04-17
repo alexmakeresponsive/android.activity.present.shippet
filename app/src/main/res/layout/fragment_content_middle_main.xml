@@ -70,6 +70,13 @@
                 android:layout_marginTop="16dp"
                 android:text="Drawer Navigation Activity" />
 
+            <Button
+                android:id="@+id/button13"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Bottom Navigation Activity" />
+
         </LinearLayout>
     </ScrollView>
 
