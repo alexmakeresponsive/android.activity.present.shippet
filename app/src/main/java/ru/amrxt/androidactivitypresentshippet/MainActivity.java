@@ -9,6 +9,8 @@ import androidx.fragment.app.FragmentTransaction;
 import android.content.Intent;
 import android.os.Bundle;
 
+import com.google.android.material.bottomsheet.BottomSheetDialogFragment;
+
 import ru.amrxt.androidactivitypresentshippet.ui.login.LoginActivity;
 
 public class MainActivity extends AppCompatActivity {
@@ -23,6 +25,10 @@ public class MainActivity extends AppCompatActivity {
         new ContentMiddleMainChild2Fragment(),
         new ContentMiddleMainChild3Fragment(),
         new ContentMiddleMainChild3Fragment(),
+    };
+
+    final BottomSheetDialogFragment[] fragmenBottomtList = new BottomSheetDialogFragment[] {
+
     };
 
     final Class[] classtList = new Class[] {
@@ -57,6 +63,11 @@ public class MainActivity extends AppCompatActivity {
 
                             fragmentTransaction.replace(R.id.fragment_container, fragmentList[index]);
                             fragmentTransaction.commit();
+    }
+
+    public void contentFragmentShow(Integer index) {
+        System.out.println(index);
+//        fragmenBottomtList[index].show(getSupportFragmentManager(), "medDocumentListDialog");
     }
 
     public void contentActivityStart(Integer index) {
