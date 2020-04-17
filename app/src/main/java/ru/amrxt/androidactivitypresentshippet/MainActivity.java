@@ -16,7 +16,7 @@ import ru.amrxt.androidactivitypresentshippet.ui.login.LoginActivity;
 public class MainActivity extends AppCompatActivity {
 
     final Fragment[] fragmentList = new Fragment[] {
-        new ContentMiddle1Fragment(),
+        new WithViewModelFragment(),
         new ContentMiddle2Fragment(),
         new ContentMiddleMainFragment(),
         new ContentMiddle4Fragment(),
