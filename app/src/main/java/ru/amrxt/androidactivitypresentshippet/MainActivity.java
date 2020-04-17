@@ -28,7 +28,7 @@ public class MainActivity extends AppCompatActivity {
     };
 
     final BottomSheetDialogFragment[] fragmenBottomtList = new BottomSheetDialogFragment[] {
-
+        new MedDocListDialogFragment()
     };
 
     final Class[] classtList = new Class[] {
@@ -66,8 +66,10 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void contentFragmentShow(Integer index) {
-        System.out.println(index);
-//        fragmenBottomtList[index].show(getSupportFragmentManager(), "medDocumentListDialog");
+//        System.out.println(index);
+        BottomSheetDialogFragment bottomSheetDialogFragments = fragmenBottomtList[index];
+
+        bottomSheetDialogFragments.show(getSupportFragmentManager(), "medDocumentListDialog");
     }
 
     public void contentActivityStart(Integer index) {
