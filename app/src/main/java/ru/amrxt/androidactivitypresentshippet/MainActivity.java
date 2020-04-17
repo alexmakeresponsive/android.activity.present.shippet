@@ -34,6 +34,7 @@ public class MainActivity extends AppCompatActivity {
         TabbedActivity.class,
         ScrollingActivity.class,
         LoginActivity.class,
+        SettingsActivity.class,
     };
 
     @Override

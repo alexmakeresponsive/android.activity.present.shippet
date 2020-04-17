@@ -98,6 +98,13 @@
                 android:layout_marginTop="16dp"
                 android:text="Login Activity" />
 
+            <Button
+                android:id="@+id/button17"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Settings Activity" />
+
         </LinearLayout>
     </ScrollView>
 
