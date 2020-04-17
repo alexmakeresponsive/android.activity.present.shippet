@@ -9,6 +9,8 @@ import androidx.fragment.app.FragmentTransaction;
 import android.content.Intent;
 import android.os.Bundle;
 
+import ru.amrxt.androidactivitypresentshippet.ui.login.LoginActivity;
+
 public class MainActivity extends AppCompatActivity {
 
     final Fragment[] fragmentList = new Fragment[] {
@@ -31,6 +33,7 @@ public class MainActivity extends AppCompatActivity {
         BottomNavActivity.class,
         TabbedActivity.class,
         ScrollingActivity.class,
+        LoginActivity.class,
     };
 
     @Override
