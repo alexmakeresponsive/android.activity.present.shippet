@@ -6,6 +6,7 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 public class MainActivity extends AppCompatActivity {
@@ -19,6 +20,11 @@ public class MainActivity extends AppCompatActivity {
         new ContentMiddleMainChild1Fragment(),
         new ContentMiddleMainChild2Fragment(),
         new ContentMiddleMainChild3Fragment(),
+        new ContentMiddleMainChild3Fragment(),
+    };
+
+    final Class[] classtList = new Class[] {
+        MovieListActivity.class
     };
 
     @Override
@@ -41,5 +47,12 @@ public class MainActivity extends AppCompatActivity {
 
                             fragmentTransaction.replace(R.id.fragment_container, fragmentList[index]);
                             fragmentTransaction.commit();
+    }
+
+    public void contentActivityStart(Integer index) {
+
+        Intent intent = new Intent(this, classtList[index]);
+
+        startActivity(intent);
     }
 }

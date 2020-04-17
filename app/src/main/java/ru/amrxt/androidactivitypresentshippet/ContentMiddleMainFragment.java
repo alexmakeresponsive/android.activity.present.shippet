@@ -30,6 +30,10 @@ public class ContentMiddleMainFragment extends Fragment {
             R.id.button10,
     };
 
+    final int[] listButtonForActivity = new int[] {
+            R.id.button6,
+    };
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -46,6 +50,20 @@ public class ContentMiddleMainFragment extends Fragment {
                 public void onClick(View view)
                 {
                     ((MainActivity)getActivity()).contentFragmentReplace(index);
+                }
+            });
+        }
+
+        for (int i=0; i<1; i++)
+        {
+            final int index = i;
+            final Button button = (Button) view.findViewById(listButtonForActivity[i]);
+            button.setOnClickListener(new View.OnClickListener()
+            {
+                @Override
+                public void onClick(View view)
+                {
+                    ((MainActivity)getActivity()).contentActivityStart(index);
                 }
             });
         }
