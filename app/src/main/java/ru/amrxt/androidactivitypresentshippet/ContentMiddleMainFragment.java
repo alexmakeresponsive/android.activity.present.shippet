@@ -34,6 +34,7 @@ public class ContentMiddleMainFragment extends Fragment {
             R.id.button6,
             R.id.button7,
             R.id.button11,
+            R.id.button12,
     };
 
     @Override
@@ -56,7 +57,7 @@ public class ContentMiddleMainFragment extends Fragment {
             });
         }
 
-        for (int i=0; i<=2; i++)
+        for (int i=0; i<=3; i++)
         {
             final int index = i;
             final Button button = (Button) view.findViewById(listButtonForActivity[i]);
