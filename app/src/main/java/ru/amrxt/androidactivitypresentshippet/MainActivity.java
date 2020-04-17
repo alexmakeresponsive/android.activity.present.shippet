@@ -30,6 +30,7 @@ public class MainActivity extends AppCompatActivity {
         NavDrawerActivity.class,
         BottomNavActivity.class,
         TabbedActivity.class,
+        ScrollingActivity.class,
     };
 
     @Override

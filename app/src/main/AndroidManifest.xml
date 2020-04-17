@@ -10,6 +10,15 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
+            android:name=".ScrollingActivity"
+            android:label="@string/title_activity_scrolling"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="ru.amrxt.androidactivitypresentshippet.MainActivity" />
+        </activity>
+        <activity
             android:name=".TabbedActivity"
             android:label="@string/title_activity_tabbed"
             android:parentActivityName=".MainActivity"
